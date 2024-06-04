@@ -16,18 +16,31 @@ public class Aplication {
         System.out.println();
         System.out.print("Is there a initial deposit (y/n)? ");
         String verification = in.next();
+
+        double value = 0.0; 
         
-        double value;
+        Account user; 
+
         if (verification.equalsIgnoreCase("y")) {   
             System.out.print("Enter initial deposit there: ");
             value = in.nextDouble();
+            user = new Account(nmrConta, nomeTitular, value); 
         } else {
-            value = 00;
+            user = new Account(nmrConta, nomeTitular);
         }
 
-        Account user = new Account(nmrConta, nomeTitular, value);
+        user.show();
+        
+        System.out.println("Enter a deposit value:");
+        value = in.nextDouble();
         user.deposit(value);
         user.show();
+
+        System.out.println("Enter a withdraw value:");
+        value = in.nextDouble();
+        user.withdraw(value);
+        user.show();
+        
         in.close();
     }
 }
