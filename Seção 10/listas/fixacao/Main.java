@@ -9,10 +9,13 @@ public class Main {
         int n = in.nextInt();
         Integer id;
         Double salary;
+        String name;
         for (int i = 0; i < n; i++) {
             System.out.println("Employee #" + (i+1) + ":");
             System.out.print("ID: ");
             id = in.nextInt();
+            System.out.print("Name: ");
+            name = in.next();
             System.out.print("Salary: ");
             salary = in.nextDouble();
             System.out.print("Enter the employee id that will have salary increase: ");
